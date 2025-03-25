@@ -43,7 +43,7 @@ const http_1 = __importDefault(require("http"));
 const app = (0, express_1.default)();
 const server = http_1.default.createServer(app);
 const wss = new ws_1.WebSocketServer({ server });
-app.use(express_1.default.static("./dist"));
+app.use(express_1.default.static("./public"));
 wss.on("connection", (ws) => {
     console.log("Client connected");
     ws.on("message", (data) => {

@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
-app.use(express.static("./dist"));
+app.use(express.static("./public"));
 
 wss.on("connection", (ws: WebSocket) => {
   console.log("Client connected");
