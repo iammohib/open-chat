@@ -9013,9 +9013,7 @@ function Ld() {
           n(p),
           localStorage.setItem("username", p)),
       (() => {
-        (c.current = new WebSocket(
-          "ws://https://open-chat-orpin.vercel.app/:8080"
-        )),
+        (c.current = new WebSocket("ws://open-chat-orpin.vercel.app/:8080")),
           (c.current.onopen = () => {
             console.log("WebSocket connected"), i(!0);
           }),
