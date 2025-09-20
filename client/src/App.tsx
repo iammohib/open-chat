@@ -13,6 +13,7 @@ function App() {
   const [isConnected, setIsConnected] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const ws = useRef<WebSocket | null>(null);
+  const url = import.meta.env.VITE_API_URL;
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
@@ -36,7 +37,7 @@ function App() {
       localStorage.setItem("username", user!);
     }
     const connect = () => {
-      ws.current = new WebSocket("ws://localhost:8080");
+      ws.current = new WebSocket(url);
 
       ws.current.onopen = () => {
         console.log("WebSocket connected");

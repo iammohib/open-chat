@@ -9013,7 +9013,9 @@ function Ld() {
           n(p),
           localStorage.setItem("username", p)),
       (() => {
-        (c.current = new WebSocket("wss://open-chat-jasm.onrender.com/:8080")),
+        (c.current = new WebSocket(
+          "wss://open-chat-server-ks2r.onrender.com/:8080"
+        )),
           (c.current.onopen = () => {
             console.log("WebSocket connected"), i(!0);
           }),
